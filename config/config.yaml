@@ -1,0 +1,14 @@
+Artifacts_root:
+  raw_file: artifacts/raw.csv
+  test_file: artifacts/test.csv
+  train_file: artifacts/train.csv
+
+#Mongo db deatils
+Mongo_database:
+  url:  mongodb+srv://sairam:sairam8662@cluster0.lyahcgb.mongodb.net/?retryWrites=true&w=majority
+  Database: Spam_Detection
+  Collection: sms_spam_detection
+
+
+Dataframe:
+  input_column: message

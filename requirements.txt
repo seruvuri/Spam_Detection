@@ -1,0 +1,12 @@
+nltk
+config-box
+scikit-learn
+PyYAML
+certifi
+seaborn
+pandas
+matplotlib
+ensure
+pymongo
+python-box
+-e .
