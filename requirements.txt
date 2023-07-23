@@ -9,4 +9,5 @@ matplotlib
 ensure
 pymongo
 python-box
+dill
 -e .

@@ -1,6 +1,7 @@
 from src.logger import logging
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 Stage_01="Data Ingestion"
 
@@ -13,4 +14,11 @@ Stage_02="Data Transformation"
 
 transformation_obj=DataTransformation()
 logging.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stage {stage_02_name} initiated<<<<<<<<<<<<<<<<<<<<<<<<'.format(stage_02_name=Stage_02))
-obj=transformation_obj.initiate_data_transformation(dataset=data_df)
+corpus,dataset=transformation_obj.initiate_data_transformation(dataset=data_df)
+
+
+Satge_03="Model Trainer"
+
+logging.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stage {stage_03_name} initiated<<<<<<<<<<<<<<<<<<<<<<<<'.format(stage_03_name=Satge_03))
+model_trainer_obj=ModelTrainer()
+obj=model_trainer_obj.initiate_model_trainer(dataset=dataset,corpus=corpus)
