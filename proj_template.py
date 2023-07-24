@@ -25,6 +25,9 @@ list_of_files=[
     f"src/config/configuration.py",
     f"src/logger.py",
     f"src/exception.py",
+    f"templates/home.html",
+    f"templates/index.html",
+    "application.py",
     f"src/utils.py"
 ]
 

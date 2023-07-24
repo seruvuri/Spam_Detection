@@ -104,6 +104,8 @@ class ModelTrainer:
 
                 save_obj(file_path=config['Artifacts_root']['model_obj'],
                          obj=best_model)
+                save_obj(file_path=config['Artifacts_root']['preprocessor_obj'],
+                         obj=tfidf)
 
                 
 

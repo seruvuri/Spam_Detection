@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <div class="login">
+            <h1> Spam Detection </h1>
+            <form action="{{ url_for('predict_datapoint')}}" method="post">
+                <div class="mb-3"><br>
+                    <label class="from-label">Message</label>
+                    <input class="from-control" type="text" name="message" placeholder="Enter the message" min="0" max="10000" />
+
+                </div>
+                <div class="mb-3"><br>
+                    <input class="btn btn-primary" type="submit" value="Predict Message Type" required />
+                </div>
+            </form>
+            <h2>
+                Detection:{{results}}
+            </h2>
+    </body>
+</html>

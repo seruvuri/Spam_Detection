@@ -4,6 +4,7 @@ Artifacts_root:
   train_file: artifacts/train.csv
   precprocessor_obj : artifacts/preprocessor.pkl
   model_obj: artifacts/model.pkl
+  preprocessor_obj: artifacts/preprocessor.pkl
 
 #Mongo db deatils
 Mongo_database:
@@ -28,9 +29,8 @@ Model_Training_Parameters:
 
 Model_Hyperparameter:
     Logistic_regression: 
-      penalty: ['l2','l1','elasticnet']
+      penalty: ['l2','l1','elasticnet',None]
       solver: ['liblinear','lbfgs','newton-cholesky']
-
     knearest_neighbor:
       n_neighbors: [1,3,5,7,9,11]
       algorithm: ['kd_tree','ball_tree','brute']

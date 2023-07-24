@@ -10,4 +10,5 @@ ensure
 pymongo
 python-box
 dill
+flask
 -e .
