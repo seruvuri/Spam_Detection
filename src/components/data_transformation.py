@@ -20,6 +20,8 @@ class DataTransformation:
                 exit()
             else:
                 global corpus
+                dataset=dataset.drop(config['Dataframe']['extra_column'],axis=1)
+                #print(dataset.info())
                 corpus=[]
                 logging.info("creating object for lemmatization")
                 wordnet=WordNetLemmatizer()

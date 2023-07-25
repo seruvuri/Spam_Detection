@@ -16,6 +16,7 @@ Mongo_database:
 Dataframe:
   input_column: message
   target_column: label
+  extra_column: _id
 
 TFIDF_parameters:
   max_features: 5000

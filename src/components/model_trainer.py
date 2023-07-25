@@ -41,49 +41,21 @@ class ModelTrainer:
                                                                                                                                                    y_test_size=y_test.shape))
                 
                 Models={
-                    "Logistic Regression":LogisticRegression(),
-                    "Knearest neighbor":KNeighborsClassifier(),
-                    "Random Forest":RandomForestClassifier(),
+                    #"Logistic Regression":LogisticRegression(),
+                    #"Knearest neighbor":KNeighborsClassifier(),
+                    #"Random Forest":RandomForestClassifier(),
                     "NaiveBayes":MultinomialNB(),
-                    "Support vector":SVC(),
-                    "GradientBoosting":GradientBoostingClassifier(),
+                    #"Support vector":SVC(),
+                    #"GradientBoosting":GradientBoostingClassifier(),
                     
                 }
 
 
                 hyper_params={
-                    "Logistic Regression":{
-                        'penalty':config['Model_Hyperparameter']['Logistic_regression']['penalty'],
-                        'solver':config['Model_Hyperparameter']['Logistic_regression']['solver'],
-                    },
-                    "Knearest neighbor":{
-                        'n_neighbors':config['Model_Hyperparameter']['knearest_neighbor']['n_neighbors'],
-                        'algorithm':config['Model_Hyperparameter']['knearest_neighbor']['algorithm'],
-                    },
-                    "Random Forest":{
-                        'n_estimators':config['Model_Hyperparameter']['RandomForest']['n_estimators'],
-                        'criterion':config['Model_Hyperparameter']['RandomForest']['criterion'],
-                        'max_depth':config['Model_Hyperparameter']['RandomForest']['max_depth'],
-                        'min_samples_split':config['Model_Hyperparameter']['RandomForest']['min_samples_split'],
-                        'min_samples_leaf':config['Model_Hyperparameter']['RandomForest']['min_samples_leaf'],
-                        'max_features':config['Model_Hyperparameter']['RandomForest']['max_features'],
-                    },
+                    
                     "NaiveBayes":{
                         'alpha':config['Model_Hyperparameter']['NaiveBays']['alpha'],
                     },
-                    "Support vector":{
-                        'C':config['Model_Hyperparameter']['SupportVector']['C'],
-                        'Kernal':config['Model_Hyperparameter']['SupportVector']['Kernal'],
-                        'gamma':config['Model_Hyperparameter']['SupportVector']['gamma'],
-                    },
-                    "GradientBoosting":{
-                        'loss':config['Model_Hyperparameter']['GradientBoosting']['loss'],
-                        'learning_rate':config['Model_Hyperparameter']['GradientBoosting']['learning_rate'],
-                        'n_estimators':config['Model_Hyperparameter']['GradientBoosting']['n_estimators'],
-                        'criterion':config['Model_Hyperparameter']['GradientBoosting']['criterion'],
-                        'max_depth':config['Model_Hyperparameter']['GradientBoosting']['max_depth'],
-                        'max_features':config['Model_Hyperparameter']['GradientBoosting']['max_features'],
-                    }
                 }
 
                 model_report:dict=model_evaluation(X_train=X_train,y_train=y_train,
